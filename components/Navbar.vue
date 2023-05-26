@@ -22,8 +22,28 @@
         />
       </svg>
     </div>
-    <div>
-      <ul class="flex gap-x-[25px] text-[14px] font-[500] max-md:hidden">
+    <div class="max-md:top-0 max-md:left-0 max-md:absolute max-md:w-full">
+      <ul
+        class="nav-item flex gap-x-[25px] text-[14px] font-[500] max-md:flex-col max-md:absolute max-md:w-3/4 max-md:min-h-screen max-md:bg-white -right-[700px] max-md:text-black max-md:justify-center max-md:gap-y-10 max-md:pl-10 transition-all ease duration-500"
+      >
+        <!-- HAMBURGER MENU -->
+        <li class="md:hidden right-10 top-10 flex flex-col">
+          <span class="w-6 h-2 border-t-2 border-white top-burger"></span>
+          <span class="w-6 h-2 border-t-2 border-white mid-burger"></span>
+          <span class="w-6 h-2 border-t-2 border-white bot-burger"></span>
+        </li>
+        <!-- CLOSE BUTTON -->
+        <li
+          class="md:hidden absolute right-6 top-6 flex flex-col cursor-pointer"
+          @click="closeNav()"
+        >
+          <span
+            class="w-6 h-2 border-t-2 border-black rotate-45 mt-2 -ml-[2px]"
+          ></span>
+          <span
+            class="w-6 h-2 border-t-2 border-black -rotate-45 -mt-2 ml-[2px]"
+          ></span>
+        </li>
         <li>
           <a href="#">Français (FR)</a>
         </li>
@@ -44,6 +64,15 @@
         </li>
       </ul>
     </div>
+    <div class="md:hidden cursor-pointer" @click="openNav()">
+      <ul class="md:hidden">
+        <li class="md:hidden right-10 top-10 flex flex-col">
+          <span class="w-6 h-2 border-t-2 border-white"></span>
+          <span class="w-6 h-2 border-t-2 border-white"></span>
+          <span class="w-6 h-2 border-t-2 border-white"></span>
+        </li>
+      </ul>
+    </div>
   </nav>
 </template>
 
@@ -51,10 +80,16 @@
 if (process.client) {
   const navScroll = () => {
     const nav = document.querySelector("nav");
+    const topBurger = document.querySelector(".top-burger");
+    const midBurger = document.querySelector(".mid-burger");
+    const botBurger = document.querySelector(".bot-burger");
     if (
       document.documentElement.scrollTop > 50 ||
       document.body.scrollTop > 50
     ) {
+      topBurger.classList.add("border-black");
+      midBurger.classList.add("border-black");
+      botBurger.classList.add("border-black");
       nav.classList.add("bg-white");
       nav.classList.remove("text-white");
       nav.classList.add("items-center");
@@ -62,6 +97,9 @@ if (process.client) {
       document.querySelector(".small-white-logo").classList.add("hidden");
       document.querySelector(".small-red-logo").classList.remove("hidden");
     } else {
+      topBurger.classList.remove("border-black");
+      midBurger.classList.remove("border-black");
+      botBurger.classList.remove("border-black");
       nav.classList.remove("bg-white");
       nav.classList.add("text-white");
       nav.classList.remove("items-center");
@@ -73,4 +111,14 @@ if (process.client) {
   };
   navScroll();
 }
+const openNav = () => {
+  const navItem = document.querySelector(".nav-item");
+  navItem.classList.remove("-right-[700px]");
+  navItem.classList.add("right-0");
+};
+const closeNav = () => {
+  const navItem = document.querySelector(".nav-item");
+  navItem.classList.add("-right-[700px]");
+  navItem.classList.remove("right-0");
+};
 </script>

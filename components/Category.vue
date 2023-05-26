@@ -7,7 +7,7 @@
     </div>
     <div class="mt-[24px] flex gap-x-[16px] max-md:flex-wrap max-md:gap-y-8">
       <div
-        class="card w-full md:w-[391px] md:h-[85px] h-[100px] bg-white rounded-[12px] flex items-center overflow-hidden"
+        class="category-card border w-full md:w-[391px] md:h-[85px] h-[100px] bg-white rounded-[12px] flex items-center overflow-hidden"
       >
         <div class="md:w-[121px] w-1/3 h-full object-cover">
           <img
@@ -21,7 +21,7 @@
         </div>
       </div>
       <div
-        class="card w-full md:w-[391px] md:h-[85px] h-[100px] bg-white rounded-[12px] flex items-center overflow-hidden"
+        class="category-card border w-full md:w-[391px] md:h-[85px] h-[100px] bg-white rounded-[12px] flex items-center overflow-hidden"
       >
         <div class="md:w-[121px] w-1/3 h-full">
           <img
@@ -37,7 +37,7 @@
         </div>
       </div>
       <div
-        class="card w-full md:w-[391px] md:h-[85px] h-[100px] bg-white rounded-[12px] flex items-center overflow-hidden"
+        class="category-card border w-full md:w-[391px] md:h-[85px] h-[100px] bg-white rounded-[12px] flex items-center overflow-hidden"
       >
         <div class="md:w-[121px] w-1/3 h-full">
           <img
@@ -55,7 +55,11 @@
 </template>
 
 <style scope>
-.card {
+.category-card {
+  transition: all 0.3s ease;
+}
+.category-card:hover {
+  transform: scale(1.02);
   filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.15));
 }
 </style>
