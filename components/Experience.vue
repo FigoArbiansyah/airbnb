@@ -12,7 +12,7 @@
     <div
       class="mt-[24px] flex gap-x-[16px] max-md:overflow-x-auto max-md:w-auto max-md:flex-wrap max-md:justify-center max-md:gap-y-6"
     >
-      <div class="md:w-[188px] w-[200px]">
+      <div class="md:w-[188px] w-[160px]">
         <div class="w-full h-[240px] overflow-hidden">
           <img
             src="~/assets/img/experience1.png"
@@ -47,7 +47,7 @@
           </svg>
         </p>
       </div>
-      <div class="md:w-[188px] w-[200px]">
+      <div class="md:w-[188px] w-[160px]">
         <div class="w-full h-[240px] overflow-hidden">
           <img
             src="~/assets/img/experience2.png"
@@ -82,7 +82,7 @@
           </svg>
         </p>
       </div>
-      <div class="md:w-[188px] w-[200px]">
+      <div class="md:w-[188px] w-[160px]">
         <div class="w-full h-[240px] overflow-hidden">
           <img
             src="~/assets/img/experience3.png"
@@ -117,7 +117,7 @@
           </svg>
         </p>
       </div>
-      <div class="md:w-[188px] w-[200px]">
+      <div class="md:w-[188px] w-[160px]">
         <div class="w-full h-[240px] overflow-hidden">
           <img
             src="~/assets/img/experience4.png"
@@ -152,7 +152,7 @@
           </svg>
         </p>
       </div>
-      <div class="md:w-[188px] w-[200px]">
+      <div class="md:w-[188px] w-[160px]">
         <div class="w-full h-[240px] overflow-hidden">
           <img
             src="~/assets/img/experience5.png"
@@ -187,7 +187,7 @@
           </svg>
         </p>
       </div>
-      <div class="md:w-[188px] w-[200px]">
+      <div class="md:w-[188px] w-[160px]">
         <div class="w-full h-[240px] overflow-hidden">
           <img
             src="~/assets/img/experience6.png"
