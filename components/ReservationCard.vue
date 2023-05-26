@@ -1,6 +1,6 @@
 <template>
   <div
-    class="md:w-[391px] md:min-h-[508px] w-[350px] min-h-[467px] bg-white absolute left-[58px] top-[132px] z-40 pt-[32px] px-[24px] rounded-[4px] pb-[24px] card max-md:top-[50%] max-md:left-[50%] max-md:-translate-y-[50%] max-md:-translate-x-[50%]"
+    class="md:w-[381px] md:min-h-[498px] w-[350px] min-h-[467px] bg-white absolute left-[58px] top-[132px] z-40 pt-[32px] px-[24px] rounded-[4px] pb-[24px] card max-md:top-[50%] max-md:left-[50%] max-md:-translate-y-[50%] max-md:-translate-x-[50%]"
   >
     <h2 class="text-[32px] leading-[37.5px] text-[#484848]">
       Réservez des hébergements et des activités uniques.
