@@ -6,8 +6,9 @@
       </h3>
     </div>
     <div class="mt-[24px] flex gap-x-[16px] max-md:flex-wrap max-md:gap-y-8">
-      <div
+      <NuxtLink
         v-for="data in dataKategori"
+        :to="`acommodation/${data.nama.toLowerCase()}`"
         class="category-card border w-full md:w-[391px] md:h-[85px] h-[100px] bg-white rounded-[12px] flex items-center overflow-hidden"
       >
         <div class="md:w-[121px] w-1/3 h-full relative bg-black">
@@ -36,7 +37,7 @@
             {{ data.nama }}
           </p>
         </div>
-      </div>
+      </NuxtLink>
     </div>
   </section>
 </template>

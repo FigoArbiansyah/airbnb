@@ -2,11 +2,10 @@
   <section class="pt-[88px] md:px-[80px]">
     <div class="max-md:px-5">
       <h3 class="font-[700] leading-[28.13px] text-[24px] text-[#484848]">
-        Hébergements Airbnb Plus
+        Akomodasi Airbnb Plus
       </h3>
       <p class="mt-[8px] font-light leading-[19px] text-[#484848] text-[16px]">
-        Une sélection de logements vérifiés selon des critères de qualité et de
-        design
+        Pilihan akomodasi diperiksa sesuai dengan kriteria kualitas dan desain
       </p>
     </div>
     <div
@@ -18,13 +17,13 @@
         alt="AIRBNB"
       />
       <NuxtLink
-        to="/"
+        to="/acommodation"
         class="mt-[37.87px] hover:scale-x-110 transition-all ease"
       >
         <div
           class="bg-white py-[16px] pl-[24px] pr-[40px] rounded-[4px] font-bold text-[10px] leading-[12px] text-[#484848] uppercase relative"
         >
-          <span>Découvrir des logements</span>
+          <span>Temukan Akomodasi</span>
           <svg
             class="absolute top-[17px] right-[16px]"
             width="6"

@@ -2,7 +2,7 @@
   <nav
     class="pl-[23px] pr-[24px] pt-[14px] flex justify-between items-end text-white fixed top-0 w-full z-50 transition-all ease"
   >
-    <div>
+    <NuxtLink to="/">
       <img
         src="~/assets/img/logo.png"
         class="w-[30px] h-[32px] small-white-logo"
@@ -21,7 +21,7 @@
           fill="#FF5A5F"
         />
       </svg>
-    </div>
+    </NuxtLink>
     <div class="max-md:top-0 max-md:left-0 max-md:absolute max-md:w-full">
       <ul
         class="nav-item flex gap-x-[25px] text-[14px] font-[500] max-md:flex-col max-md:absolute max-md:w-3/4 max-md:min-h-screen max-md:bg-white -right-[700px] max-md:text-black max-md:justify-center max-md:gap-y-10 max-md:pl-10 transition-all ease duration-500"
@@ -77,35 +77,48 @@
 </template>
 
 <script setup>
+const route = useRoute();
 if (process.client) {
   const navScroll = () => {
     const nav = document.querySelector("nav");
     const topBurger = document.querySelector(".top-burger");
     const midBurger = document.querySelector(".mid-burger");
     const botBurger = document.querySelector(".bot-burger");
-    if (
-      document.documentElement.scrollTop > 50 ||
-      document.body.scrollTop > 50
-    ) {
+    if (route.name == "index") {
+      if (
+        document.documentElement.scrollTop > 50 ||
+        document.body.scrollTop > 50
+      ) {
+        topBurger.classList.add("border-black");
+        midBurger.classList.add("border-black");
+        botBurger.classList.add("border-black");
+        nav.classList.add("bg-white");
+        nav.classList.remove("text-white");
+        nav.classList.add("items-center");
+        nav.classList.add("py-3");
+        document.querySelector(".small-white-logo").classList.add("hidden");
+        document.querySelector(".small-red-logo").classList.remove("hidden");
+      } else {
+        topBurger.classList.remove("border-black");
+        midBurger.classList.remove("border-black");
+        botBurger.classList.remove("border-black");
+        nav.classList.remove("bg-white");
+        nav.classList.add("text-white");
+        nav.classList.remove("items-center");
+        nav.classList.remove("py-3");
+        document.querySelector(".small-white-logo").classList.remove("hidden");
+        document.querySelector(".small-red-logo").classList.add("hidden");
+      }
+    } else {
       topBurger.classList.add("border-black");
       midBurger.classList.add("border-black");
       botBurger.classList.add("border-black");
       nav.classList.add("bg-white");
-      nav.classList.remove("text-white");
+      nav.classList.add("text-black");
       nav.classList.add("items-center");
       nav.classList.add("py-3");
       document.querySelector(".small-white-logo").classList.add("hidden");
       document.querySelector(".small-red-logo").classList.remove("hidden");
-    } else {
-      topBurger.classList.remove("border-black");
-      midBurger.classList.remove("border-black");
-      botBurger.classList.remove("border-black");
-      nav.classList.remove("bg-white");
-      nav.classList.add("text-white");
-      nav.classList.remove("items-center");
-      nav.classList.remove("py-3");
-      document.querySelector(".small-white-logo").classList.remove("hidden");
-      document.querySelector(".small-red-logo").classList.add("hidden");
     }
     window.addEventListener("scroll", navScroll);
   };
