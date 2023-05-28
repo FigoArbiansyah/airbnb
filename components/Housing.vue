@@ -53,12 +53,33 @@
 </template>
 
 <script setup>
+import adventure1 from "~/assets/img/adventure1.png";
+import adventure2 from "~/assets/img/adventure2.png";
+import adventure3 from "~/assets/img/adventure3.png";
+import adventure4 from "~/assets/img/adventure4.png";
+import adventure5 from "~/assets/img/adventure5.png";
+import adventure6 from "~/assets/img/adventure6.png";
+import housing1 from "~/assets/img/housing1.png";
+import housing2 from "~/assets/img/housing2.png";
+import housing3 from "~/assets/img/housing3.png";
+import housing4 from "~/assets/img/housing4.png";
+import housing5 from "~/assets/img/housing5.png";
+import housing6 from "~/assets/img/housing6.png";
+import housing7 from "~/assets/img/housing7.png";
+import housing8 from "~/assets/img/housing8.png";
+import experience1 from "~/assets/img/experience1.png";
+import experience2 from "~/assets/img/experience2.png";
+import experience3 from "~/assets/img/experience3.png";
+import experience4 from "~/assets/img/experience4.png";
+import experience5 from "~/assets/img/experience5.png";
+import experience6 from "~/assets/img/experience6.png";
+
 let dataTempat = [
   {
     id: 1,
     nama: "",
     wilayah: "Pulau Cayman",
-    gambar: "_nuxt/assets/img/adventure1.png",
+    gambar: adventure1,
     deskripsi: "PAKET 2 Malam Semua Termasuk",
     harga: {
       perOrang: 100000,
@@ -70,7 +91,7 @@ let dataTempat = [
     id: 2,
     nama: "",
     wilayah: "Uruguay",
-    gambar: "_nuxt/assets/img/adventure2.png",
+    gambar: adventure2,
     deskripsi: "PAKET 2 Malam Semua Termasuk",
     harga: {
       perOrang: 100000,
@@ -82,7 +103,7 @@ let dataTempat = [
     id: 3,
     nama: "",
     wilayah: "Islandia",
-    gambar: "_nuxt/assets/img/adventure3.png",
+    gambar: adventure3,
     deskripsi: "PAKET 2 Malam Semua Termasuk",
     harga: {
       perOrang: 100000,
@@ -94,7 +115,7 @@ let dataTempat = [
     id: 4,
     nama: "",
     wilayah: "Mongolia",
-    gambar: "_nuxt/assets/img/adventure4.png",
+    gambar: adventure4,
     deskripsi: "PAKET 2 Malam Semua Termasuk",
     harga: {
       perOrang: 100000,
@@ -106,7 +127,7 @@ let dataTempat = [
     id: 5,
     nama: "",
     wilayah: "Bahrain",
-    gambar: "_nuxt/assets/img/adventure5.png",
+    gambar: adventure5,
     deskripsi: "PAKET 2 Malam Semua Termasuk",
     harga: {
       perOrang: 100000,
@@ -118,7 +139,7 @@ let dataTempat = [
     id: 6,
     nama: "",
     wilayah: "Bosnia Dan Herzegovina",
-    gambar: "_nuxt/assets/img/adventure6.png",
+    gambar: adventure6,
     deskripsi: "PAKET 2 Malam Semua Termasuk",
     harga: {
       perOrang: 100000,
@@ -130,7 +151,7 @@ let dataTempat = [
     id: 7,
     nama: "",
     wilayah: "Toledo",
-    gambar: "_nuxt/assets/img/housing1.png",
+    gambar: housing1,
     deskripsi: "PAKET 2 Malam Semua Termasuk",
     harga: {
       perOrang: 100000,
@@ -142,7 +163,7 @@ let dataTempat = [
     id: 8,
     nama: "",
     wilayah: "Mesa",
-    gambar: "_nuxt/assets/img/housing2.png",
+    gambar: housing2,
     deskripsi: "PAKET 2 Malam Semua Termasuk",
     harga: {
       perOrang: 100000,
@@ -154,7 +175,7 @@ let dataTempat = [
     id: 9,
     nama: "",
     wilayah: "Utica",
-    gambar: "_nuxt/assets/img/housing3.png",
+    gambar: housing3,
     deskripsi: "PAKET 2 Malam Semua Termasuk",
     harga: {
       perOrang: 100000,
@@ -166,7 +187,7 @@ let dataTempat = [
     id: 10,
     nama: "",
     wilayah: "South Bend",
-    gambar: "_nuxt/assets/img/housing4.png",
+    gambar: housing4,
     deskripsi: "PAKET 2 Malam Semua Termasuk",
     harga: {
       perOrang: 100000,
@@ -178,7 +199,7 @@ let dataTempat = [
     id: 11,
     nama: "",
     wilayah: "Toledo",
-    gambar: "_nuxt/assets/img/housing5.png",
+    gambar: housing5,
     deskripsi: "PAKET 2 Malam Semua Termasuk",
     harga: {
       perOrang: 100000,
@@ -190,7 +211,7 @@ let dataTempat = [
     id: 12,
     nama: "",
     wilayah: "Mesa",
-    gambar: "_nuxt/assets/img/housing6.png",
+    gambar: housing6,
     deskripsi: "PAKET 2 Malam Semua Termasuk",
     harga: {
       perOrang: 100000,
@@ -202,7 +223,7 @@ let dataTempat = [
     id: 13,
     nama: "",
     wilayah: "Utica",
-    gambar: "_nuxt/assets/img/housing7.png",
+    gambar: housing7,
     deskripsi: "PAKET 2 Malam Semua Termasuk",
     harga: {
       perOrang: 100000,
@@ -214,7 +235,7 @@ let dataTempat = [
     id: 14,
     nama: "",
     wilayah: "South Bend",
-    gambar: "_nuxt/assets/img/housing8.png",
+    gambar: housing8,
     deskripsi: "PAKET 2 Malam Semua Termasuk",
     harga: {
       perOrang: 100000,
@@ -226,7 +247,7 @@ let dataTempat = [
     id: 15,
     nama: "",
     wilayah: "Pulau Cayman",
-    gambar: "_nuxt/assets/img/experience1.png",
+    gambar: experience1,
     deskripsi: "PAKET 2 Malam Semua Termasuk",
     harga: {
       perOrang: 100000,
@@ -238,7 +259,7 @@ let dataTempat = [
     id: 16,
     nama: "",
     wilayah: "Uruguay",
-    gambar: "_nuxt/assets/img/experience2.png",
+    gambar: experience2,
     deskripsi: "PAKET 2 Malam Semua Termasuk",
     harga: {
       perOrang: 100000,
@@ -250,7 +271,7 @@ let dataTempat = [
     id: 17,
     nama: "",
     wilayah: "Islandia",
-    gambar: "_nuxt/assets/img/experience3.png",
+    gambar: experience3,
     deskripsi: "PAKET 2 Malam Semua Termasuk",
     harga: {
       perOrang: 100000,
@@ -262,7 +283,7 @@ let dataTempat = [
     id: 18,
     nama: "",
     wilayah: "Mongolia",
-    gambar: "_nuxt/assets/img/experience4.png",
+    gambar: experience4,
     deskripsi: "PAKET 2 Malam Semua Termasuk",
     harga: {
       perOrang: 100000,
@@ -274,7 +295,7 @@ let dataTempat = [
     id: 19,
     nama: "",
     wilayah: "Bahrain",
-    gambar: "_nuxt/assets/img/experience5.png",
+    gambar: experience5,
     deskripsi: "PAKET 2 Malam Semua Termasuk",
     harga: {
       perOrang: 100000,
@@ -286,7 +307,7 @@ let dataTempat = [
     id: 20,
     nama: "",
     wilayah: "Bosnia Dan Herzegovina",
-    gambar: "_nuxt/assets/img/experience6.png",
+    gambar: experience6,
     deskripsi: "PAKET 2 Malam Semua Termasuk",
     harga: {
       perOrang: 100000,
