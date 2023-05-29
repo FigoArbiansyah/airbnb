@@ -102,24 +102,24 @@
         <div class="flex gap-x-3">
           <img
             :src="dataTempat[n0].gambar"
-            class="h-[20rem] w-[49%] h-[10rem] object-cover"
+            class="w-[49%] h-[10rem] object-cover"
             alt=""
           />
           <img
             :src="dataTempat[n1].gambar"
-            class="h-[20rem] w-[49%] h-[10rem] object-cover"
+            class="w-[49%] h-[10rem] object-cover"
             alt=""
           />
         </div>
         <div class="flex gap-x-3">
           <img
             :src="dataTempat[n2].gambar"
-            class="h-[20rem] w-[49%] h-[10rem] object-cover"
+            class="w-[49%] h-[10rem] object-cover"
             alt=""
           />
           <img
             :src="dataTempat[n3].gambar"
-            class="h-[20rem] w-[49%] h-[10rem] object-cover"
+            class="w-[49%] h-[10rem] object-cover"
             alt=""
           />
         </div>
