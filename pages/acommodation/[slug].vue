@@ -46,7 +46,11 @@
       </div>
     </nav>
     <div class="mt-[51px] flex gap-x-6 gap-y-8 flex-wrap justify-center">
-      <div v-for="data in dataTempat" class="md:w-[295px] w-full">
+      <NuxtLink
+        v-for="data in dataTempat"
+        class="md:w-[295px] w-full"
+        :to="`/${data.id}`"
+      >
         <div class="w-full h-[270px] overflow-hidden rounded-[8px]">
           <img
             :src="data.gambar"
@@ -82,7 +86,7 @@
         <p class="mt-2 text-[#717171] font-[12px] leading-[21px]">
           Dari Rp. {{ data.harga.perOrang }}/Orang - 3 Hari
         </p>
-      </div>
+      </NuxtLink>
     </div>
   </section>
 </template>

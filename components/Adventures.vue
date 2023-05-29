@@ -12,7 +12,11 @@
     <div
       class="mt-[24px] flex gap-x-[16px] max-md:overflow-x-auto max-md:w-auto max-md:flex-wrap max-md:justify-center max-md:gap-y-6"
     >
-      <div v-for="data in dataTempat" class="md:w-[188px] w-full">
+      <NuxtLink
+        v-for="data in dataTempat"
+        class="md:w-[188px] w-full"
+        :to="`/${data.id}`"
+      >
         <div class="w-full h-[240px] overflow-hidden">
           <img
             :src="data.gambar"
@@ -47,7 +51,7 @@
             />
           </svg>
         </p>
-      </div>
+      </NuxtLink>
     </div>
   </section>
 </template>
@@ -76,28 +80,28 @@ import experience6 from "~/assets/img/experience6.png";
 
 import axios from "axios";
 
-let datas = []
+let datas = [];
 
 const getDatas = async () => {
   const options = {
-    method: 'GET',
-    url: 'https://hotels4.p.rapidapi.com/v2/get-meta-data',
+    method: "GET",
+    url: "https://hotels4.p.rapidapi.com/v2/get-meta-data",
     headers: {
-      'X-RapidAPI-Key': 'b1477f9b34msh2b157c2460a4029p122a44jsneabbca682950',
-      'X-RapidAPI-Host': 'hotels4.p.rapidapi.com'
-    }
+      "X-RapidAPI-Key": "b1477f9b34msh2b157c2460a4029p122a44jsneabbca682950",
+      "X-RapidAPI-Host": "hotels4.p.rapidapi.com",
+    },
   };
 
   try {
-    const response = await axios.request(options)
-    return response.data
+    const response = await axios.request(options);
+    return response.data;
   } catch (e) {
-    console.log(e)
+    console.log(e);
   }
-}
+};
 
-datas = await getDatas()
-console.log("Object.values(datas)")
+datas = await getDatas();
+console.log("Object.values(datas)");
 
 let dataTempat = [
   {
