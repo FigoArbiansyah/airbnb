@@ -47,6 +47,8 @@ import explorer1 from "~/assets/img/explorer1.png";
 import explorer2 from "~/assets/img/explorer2.png";
 import explorer3 from "~/assets/img/explorer3.png";
 
+console.log("Halo")
+
 const dataKategori = [
   {
     id: 1,

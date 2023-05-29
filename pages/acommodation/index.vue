@@ -46,10 +46,10 @@
       </div>
     </nav>
     <div class="mt-[51px] flex gap-x-6 gap-y-8 flex-wrap justify-center">
-      <div v-for="data in dataTempat" class="md:w-[295px] w-full">
+      <a v-for="data in Object.values(datas)" class="md:w-[295px] w-full" :href="`https://${data?.url}`" target="_blank">
         <div class="w-full h-[270px] overflow-hidden rounded-[8px]">
           <img
-            :src="data.gambar"
+            :src="data.memberDealCardImageUrl ?? housing3"
             class="w-full h-full object-cover hover:scale-110 transition-all ease duration-500 cursor-pointer"
             alt=""
           />
@@ -57,7 +57,7 @@
         <div class="mt-4 flex justify-between">
           <div class="flex gap-x-[13px] items-center">
             <p class="text-[#000] text-sm leading-[14px] font-[600]">
-              {{ data.wilayah }}
+              {{ data.countryCode }}
             </p>
           </div>
           <div
@@ -80,9 +80,9 @@
           </div>
         </div>
         <p class="mt-2 text-[#717171] font-[12px] leading-[21px]">
-          Dari Rp. {{ data.harga.perOrang }}/Orang - 3 Hari
+          Dari Rp. {{ data?.harga?.perOrang }}/Orang - 3 Hari
         </p>
-      </div>
+      </a>
     </div>
   </section>
 </template>
@@ -111,6 +111,31 @@ import experience3 from "~/assets/img/experience3.png";
 import experience4 from "~/assets/img/experience4.png";
 import experience5 from "~/assets/img/experience5.png";
 import experience6 from "~/assets/img/experience6.png";
+import axios from "axios"
+
+
+let datas = []
+
+const getDatas = async () => {
+  const options = {
+    method: 'GET',
+    url: 'https://hotels4.p.rapidapi.com/v2/get-meta-data',
+    headers: {
+      'X-RapidAPI-Key': 'b1477f9b34msh2b157c2460a4029p122a44jsneabbca682950',
+      'X-RapidAPI-Host': 'hotels4.p.rapidapi.com'
+    }
+  };
+
+  try {
+    const response = await axios.request(options)
+    return response.data
+  } catch (e) {
+    console.log(e)
+  }
+}
+
+datas = await getDatas()
+console.log("Object.values(datas)")
 
 let dataTempat = [
   {

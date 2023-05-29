@@ -74,6 +74,31 @@ import experience4 from "~/assets/img/experience4.png";
 import experience5 from "~/assets/img/experience5.png";
 import experience6 from "~/assets/img/experience6.png";
 
+import axios from "axios";
+
+let datas = []
+
+const getDatas = async () => {
+  const options = {
+    method: 'GET',
+    url: 'https://hotels4.p.rapidapi.com/v2/get-meta-data',
+    headers: {
+      'X-RapidAPI-Key': 'b1477f9b34msh2b157c2460a4029p122a44jsneabbca682950',
+      'X-RapidAPI-Host': 'hotels4.p.rapidapi.com'
+    }
+  };
+
+  try {
+    const response = await axios.request(options)
+    return response.data
+  } catch (e) {
+    console.log(e)
+  }
+}
+
+datas = await getDatas()
+console.log("Object.values(datas)")
+
 let dataTempat = [
   {
     id: 1,
