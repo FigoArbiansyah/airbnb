@@ -2,7 +2,7 @@
   <section class="pt-24 md:px-[88px] px-5">
     <div>
       <p class="text-[28px]">
-        {{ dataTempat.wilayah }}
+        {{ data.wilayah }}
       </p>
       <div class="flex justify-between items-center">
         <div class="flex gap-x-[2px] items-center">
@@ -93,36 +93,32 @@
     <div
       class="mt-8 flex max-h-[20rem] w-full justify-between rounded-xl overflow-hidden items-center"
     >
-      <div class="md:w-1/2 h-[20rem] overflow-hidden">
-        <img
-          :src="dataTempat.gambar"
-          class="h-[20rem] w-full object-cover"
-          alt=""
-        />
+      <div class="md:w-1/2 w-full h-[20rem] overflow-hidden">
+        <img :src="data.gambar" class="h-[20rem] w-full object-cover" alt="" />
       </div>
       <div
         class="max-md:hidden w-[49%] h-[20rem] flex flex-col justify-between gap-y-2.5"
       >
         <div class="flex gap-x-3">
           <img
-            :src="dataTempat.gambar"
+            :src="dataTempat[n0].gambar"
             class="h-[20rem] w-[49%] h-[10rem] object-cover"
             alt=""
           />
           <img
-            :src="dataTempat.gambar"
+            :src="dataTempat[n1].gambar"
             class="h-[20rem] w-[49%] h-[10rem] object-cover"
             alt=""
           />
         </div>
         <div class="flex gap-x-3">
           <img
-            :src="dataTempat.gambar"
+            :src="dataTempat[n2].gambar"
             class="h-[20rem] w-[49%] h-[10rem] object-cover"
             alt=""
           />
           <img
-            :src="dataTempat.gambar"
+            :src="dataTempat[n3].gambar"
             class="h-[20rem] w-[49%] h-[10rem] object-cover"
             alt=""
           />
@@ -133,6 +129,10 @@
 </template>
 
 <script setup>
+let n0 = Math.round(Math.random() * 10);
+let n1 = Math.round(Math.random() * 12);
+let n2 = Math.round(Math.random() * 10);
+let n3 = Math.round(Math.random() * 13);
 import adventure1 from "~/assets/img/adventure1.png";
 import adventure2 from "~/assets/img/adventure2.png";
 import adventure3 from "~/assets/img/adventure3.png";
@@ -399,5 +399,5 @@ let dataTempat = [
 
 const route = useRoute();
 
-dataTempat = dataTempat.filter((data) => data.id == route.params.id)[0];
+const data = dataTempat.filter((data) => data.id == route.params.id)[0];
 </script>
